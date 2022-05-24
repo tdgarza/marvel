@@ -2,18 +2,18 @@
     {
         "ID": "001",
         "Name": "Angular", 
-        "Image": "angularjs.png" 
+        "Image": "1.jpg" 
     },
  
     {
         "ID": "002",
         "Name": "JSON", 
-        "Image": "json.png" 
+        "Image": "2.jpg" 
     },
   
     {
         "ID": "003",
         "Name": "Asp.Net", 
-        "Image": "aspnet.png" 
+        "Image": "3.jpg" 
     }
 ]
