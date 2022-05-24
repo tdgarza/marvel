@@ -1,0 +1,33 @@
+[
+    {
+        "nombre":"Clark Kent",
+        "superheroe":"Superman",
+        "edad":"30",
+        "poderes":[
+            "Campo de fuerza",
+            "Superfuerza",
+            "Invulnerabilidad",
+            "Superoído",
+            "Soplo",
+            "Supervelocidad",
+            "Viajar en el el tiempo",
+            "Visión calorífica"
+        ]
+    },
+    {
+        "nombre":"Bruce Wayne",
+        "superheroe":"Batman",
+        "edad":"30",
+        "poderes":[
+            "Campo de fuerza",
+            "Superfuerza",
+            "Invulnerabilidad",
+            "Superoído",
+            "Soplo",
+            "Supervelocidad",
+            "Viajar en el el tiempo",
+            "Visión calorífica"
+        ]
+    }
+
+]

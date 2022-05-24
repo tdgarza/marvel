@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cuadros.css">
+    <link rel="stylesheet" href="http://fonts.cdnfonts.com/css/mrrobot">
+     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <title>Ejemplo de Cuadros</title>
+</head>
+<body>
+    <header>
+        <h1>Desplegar Informacion de los Superheroes</h1>
+    </header>
+    <nav>Nav</nav>
+    <aside>
+     
+     <table id='table'>
+     <tr>
+                <th>Nombre</th>
+                <th>Edad</th>
+                <th>Identidad Secreta</th>
+                <th>Poderes</th>
+            </tr>
+             <script>
+                       $(document).ready(function () {
+  
+                    // FETCHING DATA FROM JSON FILE
+                    $.getJSON("superheroes.json", 
+                            function (data) {
+                        var heroe = '';
+  
+                        // ITERATING THROUGH OBJECTS
+                        $.each(data, function (key, value) {
+  
+                            heroe += '<tr>';
+                                heroe += '<td>' + value.name + '</td>';
+                                heroe += '<td>' + value.age + '</td>';
+                                heroe += '<td>' + value.secretIdentity + '</td>';
+                                heroe += '<td>' + value.powers +  '</td>';
+                                heroe += '<td>' + value.Image +  '</td>';
+                                heroe += '</tr>';
+                        });
+                          
+                        //INSERTING ROWS INTO TABLE 
+                        $('#table').append(heroe);
+                    });
+                    
+                });
+                
+            </script>
+    </table>
+    </aside>
+    <section>Section
+    <article>
+
+<img src={loadImage("1.jpg")} alt="img" />
+    </article>
+    <article>Article2</article>
+    <article>Article3</article>
+    </section>
+    <footer>footer</footer>
+</body>
+</html>

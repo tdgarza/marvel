@@ -1,0 +1,33 @@
+
+[
+{
+"GFGUserName" : "User-1",
+"NoOfProblems": "150",
+"TotalScore": "100", 
+"Articles": "30"
+},
+{
+"GFGUserName" : "User-3",
+"NoOfProblems": "100",
+"TotalScore": "75", 
+"Articles": "30"
+},
+{
+    "GFGUserName" : "User-4",
+    "NoOfProblems": "100",
+    "TotalScore": "75", 
+    "Articles": "30"
+    },
+    {
+        "GFGUserName" : "User-5",
+        "NoOfProblems": "100",
+        "TotalScore": "75", 
+        "Articles": "30"
+        },
+        {
+            "GFGUserName" : "User-2",
+            "NoOfProblems": "100",
+            "TotalScore": "75", 
+            "Articles": "30"
+            }
+]

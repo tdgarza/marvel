@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <title>JSON</title>
+</head>
+<body>
+    <table id="table">
+        <tr>
+            <th>Nombre real</th>
+            <th>Nombre de superheroe</th>
+            <th>Edad</th>
+            <th>Poderes</th>
+        </tr>
+        <script>
+            $(document).ready(function(){
+                $.getJSON("heroes.json", function(data){
+                    var heroe='';
+                    $.each(data, function(key, value){
+                        heroe +='<td>';
+                        heroe +='<td>' + value.nombre + '</td>';
+                        heroe +='<td>' + value.superheroe + '</td>';
+                        heroe +='<td>' + value.edad + '</td>';
+                        heroe +='<td>' + value.poderes + '</td>';
+                        heroe +='</td>';
+                        });
+                        $('#table').append(heroe);
+                    });
+                });            
+            </script>
+    </table>
+</body>
+</html>
