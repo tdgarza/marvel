@@ -4,23 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://bootswatch.com/5/solar/bootstrap.min.css">
     <title>Metodos Numericos</title>
 </head>
 <body>
-    <form class="form" action="metodos01.html" method="post">
-        <input type="text" name="cuadro1" value="">
-        <input type="text" name="cuadro2" value="">
-        <input type="button" name="Enviar" value="Enviar" onclick="enviarAlerta();">
-      </form>
-  
+ 
+  <h1>Pagina Prueba 1</h1>
     <script type="text/javascript">
-      function enviarAlerta(){
-        let dato =  parseInt(document.getElementsByName('cuadro1')[0].value);
-        let dato1 =  parseInt(document.getElementsByName('cuadro2')[0].value);
-        let dato2 = dato + dato1;
-        document.write(dato2);
-        alert(dato2);
+      function obtenerdatos(){
+        var nombre =  parseInt(document.getElementById('nombre').value);
+        var edad =  parseInt(document.getElementById('edad').value);
+        document.registro.nombreobtenido.value=nombre;
+        document.registro.edadobtenida.value=edad;
+
+        //let dato2 = dato + dato1; 
+        //document.write(dato2);
+        //alert(dato2);
       }
     </script>
+<form name="registro">
+
+<table>
+    <tr>
+       
+       <tr><td>Dato</td> 
+        <td><input type="text" name="nombre" id="nombre"></td></tr>
+       <tr><td>Dato</td> 
+        <td><input type="text" name="edad" id="edad"></td></tr>
+       <tr><td>Enter</td> 
+        <td><input type="button" name="Enviar" value="Enviar" onclick="obtenerdatos()"></td></tr>
+      
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td>Dato:</td>
+        <td> <input type="text" name="nombreobtenido" id="nombreobtenido"></td>
+    </tr>
+    <tr> 
+        <td>Dato:</td>
+        <td> <input type="text" name="edadobtenida" id="edadobtenida"></td>
+    </tr>
+    
+</table>
+</form>
 </body>
 </html>
+
+
