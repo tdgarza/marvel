@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodos Numericos</title>
+</head>
+<body>
+    <form class="form" action="metodos01.html" method="post">
+        <input type="text" name="cuadro1" value="">
+        <input type="text" name="cuadro2" value="">
+        <input type="button" name="Enviar" value="Enviar" onclick="enviarAlerta();">
+      </form>
+  
+    <script type="text/javascript">
+      function enviarAlerta(){
+        let dato =  parseInt(document.getElementsByName('cuadro1')[0].value);
+        let dato1 =  parseInt(document.getElementsByName('cuadro2')[0].value);
+        let dato2 = dato + dato1;
+        document.write(dato2);
+        alert(dato2);
+      }
+    </script>
+</body>
+</html>
