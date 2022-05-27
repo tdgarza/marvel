@@ -9,15 +9,15 @@
 </head>
 <body>
  
-  <h1>Pagina Prueba 1</h1>
+  <h1>OPERACIONES</h1>
     <script type="text/javascript">
       function obtenerdatos(){
         var nombre =  parseInt(document.getElementById('nombre').value);
         var edad =  parseInt(document.getElementById('edad').value);
-        document.registro.nombreobtenido.value=nombre;
-        document.registro.edadobtenida.value=edad;
-
-        //let dato2 = dato + dato1; 
+        document.registro.suma.value=nombre+edad;
+        document.registro.multiplicacion.value=nombre*edad;
+        document.registro.resta.value=nombre-edad;
+        //let dato2 = dato + dato1; 
         //document.write(dato2);
         //alert(dato2);
       }
@@ -32,24 +32,26 @@
        <tr><td>Dato</td> 
         <td><input type="text" name="edad" id="edad"></td></tr>
        <tr><td>Enter</td> 
-        <td><input type="button" name="Enviar" value="Enviar" onclick="obtenerdatos()"></td></tr>
+        <td><input type="button" name="Enviar" value="Enviar" onclick="obtenerdatos()"></td></tr><br>
       
     </tr>
-</table>
+</table><br>
 
+<h1>RESULTADOS</h1>
 <table>
     <tr>
-        <td>Dato:</td>
-        <td> <input type="text" name="nombreobtenido" id="nombreobtenido"></td>
+        <td>Suma:</td>
+        <td> <input type="text" name="suma" id="suma"></td>
     </tr>
     <tr> 
-        <td>Dato:</td>
-        <td> <input type="text" name="edadobtenida" id="edadobtenida"></td>
+        <td>Multiplicacion:</td>
+        <td> <input type="text" name="multiplicacion" id="multiplicacion"></td>
     </tr>
-    
+    <tr> 
+        <td>Resta:</td>
+        <td> <input type="text" name="resta" id="resta"></td>
+    </tr>  
 </table>
 </form>
 </body>
 </html>
-
-
