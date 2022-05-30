@@ -11,45 +11,53 @@
  
   <h1>OPERACIONES</h1>
     <script type="text/javascript">
-      function obtenerdatos(){
-        var nombre =  parseInt(document.getElementById('nombre').value);
-        var edad =  parseInt(document.getElementById('edad').value);
-        document.registro.suma.value=nombre+edad;
-        document.registro.multiplicacion.value=nombre*edad;
-        document.registro.resta.value=nombre-edad;
-        //let dato2 = dato + dato1; 
-        //document.write(dato2);
-        //alert(dato2);
-      }
-    </script>
-<form name="registro">
-
-<table>
-    <tr>
-       
-       <tr><td>Dato</td> 
-        <td><input type="text" name="nombre" id="nombre"></td></tr>
-       <tr><td>Dato</td> 
-        <td><input type="text" name="edad" id="edad"></td></tr>
-       <tr><td>Enter</td> 
-        <td><input type="button" name="Enviar" value="Enviar" onclick="obtenerdatos()"></td></tr><br>
       
+      function sumadatos(){
+        var d1 =  parseInt(document.getElementById('dato1').value);
+        var d2 =  parseInt(document.getElementById('dato2').value);
+        document.registro.resultado.value=d1+d2;
+      }
+      function restadatos(){
+        var d1 =  parseInt(document.getElementById('dato1').value);
+        var d2 =  parseInt(document.getElementById('dato2').value);
+        document.registro.resultado.value=d1-d2;
+      }
+      function multiplicaciondatos(){
+        var d1 =  parseInt(document.getElementById('dato1').value);
+        var d2 =  parseInt(document.getElementById('dato2').value);
+        document.registro.resultado.value=d1*d2;
+      }
+      function divisiondatos(){
+        var d1 =  parseInt(document.getElementById('dato1').value);
+        var d2 =  parseInt(document.getElementById('dato2').value);
+        document.registro.resultado.value=d1/d2;
+      }
+
+      
+    </script>
+
+<form name="registro">
+<table>
+    <tr>     
+       <tr><td>Dato</td> 
+        <td><input type="text" name="dato1" id="dato1"></td></tr>
+       <tr><td>Dato</td> 
+        <td><input type="text" name="dato2" id="dato2"></td></tr>
+       <tr>
+    <td>Operacion</td> 
+        <td><input type="button" name="Enviar" value="+" onclick="sumadatos()">
+        <input type="button" name="Enviar" value="-" onclick="restadatos()">
+        <input type="button" name="Enviar" value="*" onclick="multiplicaciondatos()">
+        <input type="button" name="Enviar" value="/" onclick="divisiondatos()"></td>
     </tr>
+
 </table><br>
 
-<h1>RESULTADOS</h1>
+<h1>---------------</h1>
 <table>
-    <tr>
-        <td>Suma:</td>
-        <td> <input type="text" name="suma" id="suma"></td>
-    </tr>
     <tr> 
-        <td>Multiplicacion:</td>
-        <td> <input type="text" name="multiplicacion" id="multiplicacion"></td>
-    </tr>
-    <tr> 
-        <td>Resta:</td>
-        <td> <input type="text" name="resta" id="resta"></td>
+        <td>Resultado:</td>
+        <td> <input type="text" name="resultado" id="resultado"></td>
     </tr>  
 </table>
 </form>

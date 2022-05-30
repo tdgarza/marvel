@@ -1,0 +1,35 @@
+    <html>
+    
+    <head>
+    <script type="text/javascript">
+    function check()
+    {
+            cafe=document.formu.cafe;
+            respuesta=document.formu.respuesta;
+            txt="";
+            for (i=0;i<cafe.length;++i)
+            {
+                    if (cafe[i].checked)
+                    {
+                            txt=txt + cafe[i].value + " ";
+                    }
+            }
+    
+            respuesta.value="Tu quieres café con " + txt;
+    }
+    </script>
+    </head>
+    
+    <body>
+    <form name="formu" id="formu">
+    ¿Cómo quieres tu café?<br><br>
+    <input type="checkbox" name="cafe" value="crema">Con crema<br>
+    <input type="checkbox" name="cafe" value="azúcar">Con azúcar<br>
+    <br>
+    <input type="button" name="test" onclick="check()" value="Enviar pedido">
+    <br><br>
+    <input type="text" name="respuesta" size="50">
+    </form>
+    </body>
+    
+    </html>
