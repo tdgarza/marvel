@@ -11,9 +11,33 @@
     </script>
 </head>
 <body>
+
     <section>
         <h1>Desplegar Informacion de los Superheroes</h1>
   
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("form.loader").on('submit',function(e){
+                    e.preventDefault();
+                    $.ajax({
+                        url: "superheroes.json",
+                        type: "POST",
+                        cache: false,
+                        success: function(data){
+                            console.log(data);
+                        },
+                        error: function(data){
+                            console.log(data);
+                        }
+                    });
+                });
+            });
+        </script>
+        
+        <form class="loader" method="POST" enctype="multipart/form-data">
+            <input type="text" name="name">
+            <button type="submit">Cargar datos</button>
+        </form>
         <!-- TABLE CONSTRUCTION-->
         <table id='table'>
             <!-- HEADING FORMATION -->

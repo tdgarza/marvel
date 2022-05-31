@@ -1,18 +1,11 @@
-<<<<<<< HEAD
 body{
-	background-color: orange;
+	background-color:white;
 }
 h1{
 font-family: 'Blaster Eternal', sans-serif;
-
-                                                
-=======
-body{
-	background-color: orange;
+color: red;
 }
-h1{
-font-family: 'Blaster Eternal', sans-serif;
-
-                                                
->>>>>>> 544607adadf62c55f537ffb630046011e8627cc5
+h2{
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	color: blue;
 }

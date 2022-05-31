@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <!-- Agrego onload al body para que se haga la primer llamada automáticamente -->
+  <body onload="loadUsers()">
+    <form action="">
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" />
+      </div>
+      <div>
+        <label for="age">Age:</label>
+        <input type="number" name="age" id="age" />
+      </div>
+      <div>
+        <label for="description">Description:</label>
+        <input type="text" name="description" id="description" />
+      </div>
+      <button type="button" onclick="addUser()">Actualizar</button>
+      <!-- Declaro los contenedores de datos  a mostrar -->
+      <div id="showname"></div>
+      <div id="showage"></div>
+      <div id="showdescription"></div>
+    </form>
+  </body>
+</html>
+
+<script>
+   // Array para depositar datos tras primer llamada al JSON.
+  let users = [];
+
+  function mostrarUsuarios() {
+    // Variables de contenedores
+    var name = document.getElementById("showname");
+    var age = document.getElementById("showage");
+    var description = document.getElementById("showdescription");
+    // Borro los datos para cargar nuevos
+    name.innerHTML = "";
+    age.innerHTML = "";
+    description.innerHTML = "";
+//Agrego el name, age, description por cada persona en JSON
+    users.forEach((element) => {
+      name.append(`Nombre: ${element.name}`);
+      age.append(`Description: ${element.description} `);
+      description.append(`Age: ${element.age} `);
+    });
+  }
+
+  function addUser() {
+    // Tomo los valores de cada input
+    var name = document.getElementById("name").value;
+    var age = document.getElementById("age").value;
+    var description = document.getElementById("description").value;
+
+    // Agrego al array objeto con datos de input, nuevo registro.
+    users.push({ name, age, description });
+    mostrarUsuarios(); // Vuelvo a mostrar los datos
+  }
+
+  // Cargo los usuarios desde JSON solo la primera vez que carga página.
+  function loadUsers() {
+    fetch("data.json")
+      .then((respuesta) => respuesta.json())
+      .then((respuesta) => {
+        users = respuesta; // Vuelco respuesta en array users
+        mostrarUsuarios();
+      })
+      .catch((error) => alert("Ha ocurrido un error (" + error.message + ")"));
+  }
+</script>

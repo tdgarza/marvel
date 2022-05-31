@@ -7,8 +7,7 @@
         "Radiation resistance",
         "Turning tiny",
         "Radiation blast"
-      ],
-      "Image":"1.jpg"
+      ]
     },
    
     {
@@ -19,8 +18,7 @@
         "Million tonne punch",
         "Damage resistance",
         "Superhuman reflexes"
-      ],
-      "Image":"2.jpg"
+      ]
     },
     {
       "name" : "Eternal Flame",
@@ -32,7 +30,6 @@
         "Inferno",
         "Teleportation",
         "Interdimensional travel"
-      ],
-      "Image":"3.jpg"
+      ]
     }
   ]

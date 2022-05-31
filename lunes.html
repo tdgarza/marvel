@@ -9,5 +9,34 @@
 </head>
 <body>
 	<h1>PAGINA ESPANTA VIEJAS vol. 1</h1>
+	<h2>Calculadora v.1</h2>
+	<script type="text/javascript">
+		function sumardatos(){
+			var d1=parseInt(document.getElementById('dato1').value); //parseInt convierte el texto a numero
+			var d2=parseInt(document.getElementById('dato2').value);
+			document.registro.resultado.value=d1+d2;
+		}
+	</script>
+<form name="registro">
+<table>
+<tr><td>Dato 1</td><td><input type="text" name="dato1" id="dato1"></td></tr>
+<tr><td>Dato 2</td><td><input type="text" name="dato2" id="dato2"></td></tr>
+<tr>
+	<td>
+		<input type="button" name="Enviar" value="+" onclick="sumardatos()">
+		<input type="button" name="Enviar" value="-" onclick="restarrdatos()">
+		<input type="button" name="Enviar" value="*" onclick="multiplicardatos()">
+		<input type="button" name="Enviar" value="/" onclick="dividirdatos()">
+	</td>
+</tr>
+</table>
+<table>
+<tr>
+	<td>Resultado:</td>
+	<td><input type="text" name="resultado" id="resultado"></td>
+</tr>
+</table>
+</form>
+
 </body>
 </html>
